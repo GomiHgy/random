@@ -10,7 +10,7 @@ namespace Random {
 
     /**
      * 乱数のシード値を設定します
-     * @param x シード値。設定されない場合は
+     * @param x シード値
      * @param y シード値
      * @param z シード値
      * @param w シード値

@@ -2,7 +2,7 @@
  * Random
  */
 //% weight=100 color=#d26bff icon=""
-namespace Random {
+namespace ランダム {
     let _x: number = 123456789;
     let _y: number = 362436069;
     let _z: number = 521288629;
@@ -16,7 +16,7 @@ namespace Random {
      * @param w シード値
      */
     //% block
-    export function setRandomSeed(x: number = 123456789, y: number = 362436069, z: number = 521288629, w: number = 88675123): void {
+    export function 乱数のシード値を設定する(x: number = 123456789, y: number = 362436069, z: number = 521288629, w: number = 88675123): void {
         _x = Math.constrain(Math.floor(x), 0, 4294967295);
         _y = Math.constrain(Math.floor(y), 0, 4294967295);
         _z = Math.constrain(Math.floor(z), 0, 4294967295);
@@ -24,26 +24,24 @@ namespace Random {
     }
 
     /**
-     * 乱数を生成します。
-     * 次の生成時に乱数は変化しません。
+     * 乱数を取得します。
+     * 乱数を生成しない限り同じ値が取得されます
      */
     //% block
-    export function generate(): uint32 {
+    export function 乱数を取得する(): uint32 {
         let t: number = _x ^ (_x << 11);
         return (_w ^ (_w >> 19)) ^ (t ^ (t >> 8));
     }
 
     /**
      * 乱数を生成します。
-     * 次の生成時に乱数は変化します。
      */
     //% block
-    export function next(): uint32 {
+    export function 乱数を生成する(): void {
         let t: number = _x ^ (_x << 11);
         _x = _y;
         _y = _z;
         _z = _w;
         _w = (_w ^ (_w >> 19)) ^ (t ^ (t >> 8));
-        return _w
     }
 }

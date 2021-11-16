@@ -1,0 +1,6 @@
+{
+    "Random|block": "ランダム",
+    "Random.setRandomSeed|block": "乱数のシード値を設定する",
+    "Random.generate|block": "乱数を生成する",
+    "Random.next|block": "乱数を生成してシード値を変更する"
+}

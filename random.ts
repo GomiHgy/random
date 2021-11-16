@@ -1,9 +1,4 @@
 /**
-* このファイルを使って、独自の関数やブロックを定義してください。
-* 詳しくはこちらを参照してください：https://makecode.microbit.org/blocks/custom
-*/
-
-/**
  * Random
  */
 //% weight=100 color=#d26bff icon=""
